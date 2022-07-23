@@ -51,10 +51,10 @@ public class CalculationTest {
 //    }
 
     @Test
-    @DisplayName("Simple divide should work")
+   @DisplayName("Simple divide should work")
     public void testDivide() {
-        double x=7/4;
-        assertEquals(x, calculation.divide(5,2),
+        double x=7/6;
+        assertEquals(x, calculation.divide(7,6),
                 "Regular devide should work");
     }
 
