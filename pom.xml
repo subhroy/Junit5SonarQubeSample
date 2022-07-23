@@ -90,7 +90,7 @@
                         </configuration>
                     </execution>
 
-                    <!--Added for code coverage report aggregation -->
+                    <!--Added for code coverage report aggregation, This is an optional Tag. Not mandatory -->
                     <execution>
                         <id>report-aggregate</id>
                         <phase>verify</phase>

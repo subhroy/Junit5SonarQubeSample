@@ -1,5 +1,5 @@
 # Demonstrate JUNIT5 and SonarQube Implementation with Maven Project
-This project demonstrate JNUT5 and SonarQube integration with Maven project
+This project demonstrate JUNIT5 and SonarQube integration with Maven project
 
 ## Required Dependencies
 Below dependencies are required for Junit5 and SonarQube Testcase
@@ -20,6 +20,8 @@ Below dependencies are required for Junit5 and SonarQube Testcase
 ## Setting plugins
 
 ### Sonar Scanner
+This Plugin scans the project for any class file to do SonarQube report generation
+
      <build>
         <plugins>
             <plugin>
@@ -87,7 +89,7 @@ Below dependencies are required for Junit5 and SonarQube Testcase
                 </configuration>
             </execution>
     
-            <!--Added for code coverage report aggregation -->
+            <!--Added for code coverage report aggregation. But this is not mandatory tag-->
             <execution>
                 <id>report-aggregate</id>
                 <phase>verify</phase>
@@ -99,6 +101,9 @@ Below dependencies are required for Junit5 and SonarQube Testcase
     </plugin>    
 
 ## Specify SonarQube profile
+Below is the profile we need to set to access SonarQube URL during maven build. You can see that we have used Token as <sonar.login> value.
+It is not advised and good practise to use id/password to access SonarQube, so token is used.
+
     <profiles>
         <profile>
             <id>sonar</id>
@@ -132,7 +137,11 @@ Below dependencies are required for Junit5 and SonarQube Testcase
         </profile>
     </profiles>
 
-## Build Project with Test case and Push code to SonarQube
+## Build Project 
+You can use the below command to build maven project along with the test cases and push the report to SonarQube.
+
+In the command "test" is the phase for jacoco report and "sonar:sonar" used for SonarQube. 
+
 ### Command:
 _mvn clean test install sonar:sonar -Pcoverage_
 
