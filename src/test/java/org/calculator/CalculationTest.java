@@ -7,41 +7,41 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CalculatorTest {
+public class CalculationTest {
 
-    private Calculator calculator=new Calculator();
+    private Calculation calculation=new Calculation();
 
     @BeforeEach
     public void setUp() throws Exception {
-        calculator = new Calculator();
+        calculation = new Calculation();
     }
 
     @Test
     @DisplayName("Simple multiplication should work")
     public void testMultiply() {
-        assertEquals(20, calculator.multiply(4,5),
+        assertEquals(20, calculation.multiply(4,5),
                 "Regular multiplication should work");
     }
 
     @RepeatedTest(5)
     @DisplayName("Ensure correct handling of zero")
     public void testMultiplyWithZero() {
-        assertEquals(0, calculator.multiply(0,5), "Multiple with zero should be zero");
-        assertEquals(0, calculator.multiply(5,0), "Multiple with zero should be zero");
+        assertEquals(0, calculation.multiply(0,5), "Multiple with zero should be zero");
+        assertEquals(0, calculation.multiply(5,0), "Multiple with zero should be zero");
     }
 
     @Test
     @DisplayName("Simple add should work")
     public void testAdd() {
-        assertEquals(9, calculator.add(4,5),
+        assertEquals(9, calculation.add(4,5),
                 "Regular add should work");
     }
 
     @RepeatedTest(5)
     @DisplayName("Ensure correct handling of zero in add")
     public void testADDWithZero() {
-        assertEquals(5, calculator.add(0,5), "Add with zero should be zero");
-        assertEquals(5, calculator.add(5,0), "Add with zero should be zero");
+        assertEquals(5, calculation.add(0,5), "Add with zero should be zero");
+        assertEquals(5, calculation.add(5,0), "Add with zero should be zero");
     }
 
 //    @Test
@@ -53,8 +53,8 @@ public class CalculatorTest {
     @Test
     @DisplayName("Simple divide should work")
     public void testDivide() {
-        double x=5/2;
-        assertEquals(x, calculator.divide(5,2),
+        double x=7/4;
+        assertEquals(x, calculation.divide(5,2),
                 "Regular devide should work");
     }
 

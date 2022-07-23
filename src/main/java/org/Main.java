@@ -1,10 +1,10 @@
 package org;
 
-import org.calculator.Calculator;
+import org.calculator.Calculation;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
-        new Calculator().divide(10,5);
+        new Calculation().divide(10,5);
     }
 }

@@ -1,7 +1,7 @@
 package org.calculator;
 
-public class Calculator {
-    public Calculator()
+public class Calculation {
+    public Calculation()
     {
 
     }
